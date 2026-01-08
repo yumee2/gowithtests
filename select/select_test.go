@@ -1,15 +1,32 @@
 package myselect
 
-import "testing"
+import (
+	"net/http"
+	"net/http/httptest"
+	"testing"
+	"time"
+)
 
 func TestRacer(t *testing.T) {
-	slowURL := "http://www.facebook.com"
-	fastURL := "http://www.quii.dev"
+	slowServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		time.Sleep(time.Millisecond * 20)
+		w.WriteHeader(http.StatusOK)
+	}))
 
-	want := fastURL
-	got := Racer(slowURL, fastURL)
+	fastServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+	}))
+
+	slowServerURL := slowServer.URL
+	fastServerURL := fastServer.URL
+
+	want := fastServerURL
+	got := Racer(slowServerURL, fastServerURL)
 
 	if got != want {
 		t.Errorf("got %q want %q", got, want)
 	}
+
+	slowServer.Close()
+	fastServer.Close()
 }
