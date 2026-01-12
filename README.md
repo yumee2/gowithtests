@@ -13,19 +13,19 @@
 
 ## 📁 Структура проекта
 
-gowithtests/
-├── hello/ # Hello World с использованием TDD
-├── integers/ # Тестирование операций с целыми числами
-├── iteration/ # Циклы и итерация
-├── arrays/ # Массивы и срезы (slices)
-├── structs/ # Структуры и методы
-├── pointers/ # Указатели и работа с памятью
-├── maps/ # Карты (maps) и хэш-таблицы
-├── dependency-injection/ # Паттерн внедрения зависимостей
-├── mocking/ # Мокирование и работа с интерфейсами
-├── concurrency/ # Горутины и каналы
-├── select/ # Оператор select
-├── reflection/ # Рефлексия в Go
-├── sync/ # Примитивы синхронизации
-├── context/ # Пакет context
-└── README.md # Этот файл
+gowithtests/ </br>
+ ├── hello/ # Hello World с использованием TDD </br>
+ ├── integers/ # Тестирование операций с целыми числами </br>
+ ├── iteration/ # Циклы и итерация </br>
+ ├── arrays/ # Массивы и срезы (slices) </br>
+ ├── structs/ # Структуры и методы </br>
+ ├── pointers/ # Указатели и работа с памятью </br>
+ ├── maps/ # Карты (maps) и хэш-таблицы </br>
+ ├── dependency-injection/ # Паттерн внедрения зависимостей </br>
+ ├── mocking/ # Мокирование и работа с интерфейсами </br>
+ ├── concurrency/ # Горутины и каналы </br>
+ ├── select/ # Оператор select </br>
+ ├── reflection/ # Рефлексия в Go </br>
+ ├── sync/ # Примитивы синхронизации </br>
+ ├── context/ # Пакет context </br>
+ └── README.md # Этот файл </br>
